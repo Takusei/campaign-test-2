@@ -95,21 +95,8 @@ class HTMLGeneratorApp:
             if form_in_second.has_attr("onsubmit"):
                 form_in_template["onsubmit"] = form_in_second["onsubmit"]
 
-        # Replace radio inputs and labels
-        second_radios = second_soup.find_all("input", {"type": "radio"})
-        second_labels = second_soup.find_all("label")
-        template_radios = form_in_template.find_all("input", {"type": "radio"})
-        template_labels = form_in_template.find_all("label", {"class": "userSurvey__form-list-label01"})
-
-        for new_input, new_label, old_input, old_label in zip(second_radios, second_labels, template_radios, template_labels):
-            old_input["id"] = new_input.get("id", "")
-            old_input["name"] = new_input.get("name", "")
-            old_input["value"] = new_input.get("value", "")
-            old_label["for"] = new_input.get("id", "")
-            old_label.string = new_label.get_text(strip=True)
-
         # Replace textarea field with input type="text" from second HTML
-        template_textarea = form_in_template.find("textarea", {"name": "answers[QUESTION_2_ID]"})
+        template_textarea = form_in_template.find("textarea", {"name": "answers[QUESTION_ID]"})
         second_input = second_soup.find("input", {"type": "text", "name": True})
         if template_textarea and second_input:
             template_textarea["name"] = second_input["name"]

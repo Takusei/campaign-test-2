@@ -1,0 +1,73 @@
+<html><!--◇◇◇◇◇-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+<meta http-equiv="Content-Language" content="ja">
+<title>202507_【Instagram】豪華賞品が当たるキャンペーン！</title>
+<script type="text/javascript">
+<!--
+function doTrim(el) {
+  el.value = el.value.replace(/^\s+|\s+$/g, '');
+}
+
+function isInput(el) {
+  return el.value.length != 0;
+}
+
+function isLength(el, len) {
+  if ("え".length == 2) {
+    len *= 2;
+  }
+  return el.value.length <= len;
+}
+
+function zen2han(el) {
+  el.value = el.value.replace(/[０]/g, "0");
+  el.value = el.value.replace(/[１]/g, "1");
+  el.value = el.value.replace(/[２]/g, "2");
+  el.value = el.value.replace(/[３]/g, "3");
+  el.value = el.value.replace(/[４]/g, "4");
+  el.value = el.value.replace(/[５]/g, "5");
+  el.value = el.value.replace(/[６]/g, "6");
+  el.value = el.value.replace(/[７]/g, "7");
+  el.value = el.value.replace(/[８]/g, "8");
+  el.value = el.value.replace(/[９]/g, "9");
+}
+
+function checkForm() {
+  var el;
+  var obj = document.enenForm;
+
+  el = obj.elements['answers[52150_285932]'];
+  doTrim(el);
+  zen2han(el);
+  if (!isInput(el)) {
+    alert("「当選されたアカウントに送付された【特典コード】」を入力してください。");
+    return false;
+  }
+
+  if (!isLength(el, 256)) {
+    alert("「当選されたアカウントに送付された【特典コード】」は256文字以内で入力してください。");
+    return false;
+  }
+
+}
+// -->
+</script>
+</head>
+<body>
+<h1>202507_【Instagram】豪華賞品が当たるキャンペーン！</h1>
+<form action="https://form.rakuten.co.jp/ans/apply/52150" name="enenForm" method="POST" onSubmit="return checkForm()">
+<table border=1>
+<tr>
+<td>当選されたアカウントに送付された【特典コード】【必須】【256文字】</td>
+<td>
+<input type=text name="answers[52150_285932]">
+</td>
+</tr>
+</table>
+<input type="hidden" name="c" value="楽天">
+<input type="hidden" name="l" value="ja">
+<input type="submit" value="送信">
+</form>
+</body>
+</html>
